@@ -1,0 +1,28 @@
+CREATE DATABASE mydb DEFAULT CHARACTER SET utf8;
+
+use mydb
+
+create table zip(
+ id int auto_increment primary key,
+ jis char(10) default '' not null,
+ oldcode char(5) not null,
+ code char(7) not null,
+ address1ruby varchar(10) default '' not null,
+ address2ruby text not null,
+ address3ruby text not null,
+ address1 varchar(10) default '' not null,
+ address2 text not null,
+ address3 text not null,
+ address4 text not null,
+ officeruby text not null,
+ office text not null,
+ key(code)
+)default character set utf8;
+
+load data local infile "U:/システム開発実習/KEN_ALL.CSV" into table zip
+fields terminated by ',' enclosed by '"'
+(jis,oldcode,code,address1ruby,address2ruby,address3ruby,address1,address2,address3);
+
+load data local infile "U:/システム開発実習/JIGYOSYO.CSV" into table zip
+fields terminated by ',' enclosed by '"'
+(jis,officeruby,office,address1,address2,address3,address4,code,oldcode);
