@@ -1,2 +1,3 @@
 # zipsmaps
-MySQLを利用した日本郵便の郵便番号による事業所位置情報の検索と表示
+MySQLを利用した日本郵便の郵便番号による事業所位置情報の検索と表示をします
+JIGYOSYO.CSV,KEN_ALL.CSVファイルをMySqlCode.txtによってMySQLに読み込んだ後、
